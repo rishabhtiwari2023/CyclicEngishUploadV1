@@ -1,0 +1,43 @@
+ <!-- form handling -->
+ <form action="/api/users" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Mark Stoenis">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="">Mobile</label>
+            <input type="text" name="email" value="" placeholder="9384343****">
+        </div>
+        <div class="form-group">
+            <label for="gender" class="">Class</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="11" >
+                <label for="radio-2" class="radio-label">11</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="12" >
+                <label for="radio-3" class="radio-label">12</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="">Subject</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Math" >
+                <label for="radio-4" class="radio-label">Math</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Chemistry" >
+                <label for="radio-5" class="radio-label">Chemistry</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" onclick="fun()" class="btn text-dark update">Save</button>
+            <a href="/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+        </div>
+<script>Function fun(){ window.alert("you hve inserted data")}</script>
+    </div>
+</form>

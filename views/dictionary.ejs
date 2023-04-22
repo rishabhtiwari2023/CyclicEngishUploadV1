@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content=
+	"width=device-width, initial-scale=1.0" />
+
+<link id="favicon" rel="icon"
+	href="" sizes="16x16" />
+	
+<!-- font-awesome library to make the
+	webpage more appealing -->
+<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<!-- Internal CSS styling -->
+<style>
+
+.cont{
+	margin: 20px 20px 20px 20px;height: 550px;
+
+	border: 10px inset goldenrod;border: radius buttom 20px;text-align: center;display: flex;
+}
+#t1{
+	height: 30px;width: 400px;
+	margin: 20px 20px 20px 20px;border-radius: 20px;
+	margin-top: 100px;margin-bottom: 50px;
+	font-family: 'Courier New', Courier, monospace;font-weight: bolder;border-color: indianred;
+}
+#b1{
+	color: ivory;background-color: rgb(107, 191, 247);border-radius: 20px;
+	font-weight: 20px;font-family: Arial, Helvetica, sans-serif;width: 250px;
+	height: 40px;font-size: 35px;
+}
+#music{
+	background-color: white;
+	margin-top: 20px;color: black;margin-bottom: 20px;
+}
+.head{
+	border-right: rgb(22, 15, 5) 2px;
+}
+#p1 #p2 #p3 #p4{
+	border-bottom: brown 2px;
+}
+</style>
+</head>
+
+<body><div class="cont"><div>
+	<img src="image/unnamed.png" alt=""height="400px" width="300px" srcset="">
+</div>
+		<div class="head">
+			<h1>Dictionary</h1>
+		<input  type="text" placeholder="Enter word for searching" id="t1"><br>
+		<button id="b1" onclick="call()">Press here</button>
+		<!-- <button id="b2" >Pronaunce</button> -->
+
+</div>
+<div id="d3"><h3>Pronaunce</h3>	
+	<audio controls id="music">
+	<source src="" type="audio/mpeg">
+	</audio><br><span>Meaning 1 =></span>
+	<div id="p1"></div>
+	<span>Meaning 2 =></span>	<div id="p2"></div>
+	<span>Example =>	</span><div id="p3"></div>
+	<span>Phonetics =></span>	<div id="p4"></div></div></div>
+
+</body><script>
+   (function(_0x42e681,_0x5dd73d){const _0x53dd4b=_0x17c5,_0x4673ae=_0x42e681();while(!![]){try{const _0x421512=-parseInt(_0x53dd4b(0x1cd))/0x1*(-parseInt(_0x53dd4b(0x1c9))/0x2)+parseInt(_0x53dd4b(0x1c8))/0x3*(parseInt(_0x53dd4b(0x1d0))/0x4)+parseInt(_0x53dd4b(0x1ba))/0x5+parseInt(_0x53dd4b(0x1c5))/0x6+-parseInt(_0x53dd4b(0x1be))/0x7+-parseInt(_0x53dd4b(0x1c7))/0x8*(parseInt(_0x53dd4b(0x1c6))/0x9)+parseInt(_0x53dd4b(0x1b9))/0xa*(-parseInt(_0x53dd4b(0x1b5))/0xb);if(_0x421512===_0x5dd73d)break;else _0x4673ae['push'](_0x4673ae['shift']());}catch(_0x5d1ea7){_0x4673ae['push'](_0x4673ae['shift']());}}}(_0x3561,0x21592));var msg=new SpeechSynthesisUtterance();function _0x3561(){const _0x4a699f=['\x20is','234602uXfTfY','stringify','audio','184028UdpicU','log','phonetics','550033NIPaFD','value','innerHTML','Example','80xbeHaI','1246125wxxXmg','json','speak','keys','142821eJJcPz','phonetic','definitions','partOfSpeech','thankyou\x20for\x20searching\x20\x20\x20\x20\x20Have\x20a\x20nice\x20day','definition','meanings','334044LaqZjy','9RaqvYQ','227896mrHHwW','3SNZBGS','2FaBUCO','getElementById','The\x20first\x20meaning\x20'];_0x3561=function(){return _0x4a699f;};return _0x3561();}function _0x17c5(_0x18ce25,_0x346a09){const _0x356122=_0x3561();return _0x17c5=function(_0x17c5e6,_0x40cf09){_0x17c5e6=_0x17c5e6-0x1b5;let _0x26b7ad=_0x356122[_0x17c5e6];return _0x26b7ad;},_0x17c5(_0x18ce25,_0x346a09);}function call(){const _0x47795f=_0x17c5;let _0x2731d4=document['getElementById']('t1')[_0x47795f(0x1b6)];console[_0x47795f(0x1d1)](_0x2731d4);const _0x539ba0='https://api.dictionaryapi.dev/api/v2/entries/en/'+_0x2731d4;async function _0x4a4774(){const _0x58f560=_0x47795f,_0x171bf7=await fetch(_0x539ba0),_0x13efe4=await _0x171bf7[_0x58f560(0x1bb)]();str=JSON[_0x58f560(0x1ce)](_0x13efe4),console[_0x58f560(0x1d1)](_0x13efe4[0x0]['word']),console['log'](_0x13efe4[0x0][_0x58f560(0x1d2)]),console['log'](_0x13efe4[0x0]['orgin']),console['log'](_0x13efe4[0x0][_0x58f560(0x1c4)][0x0][_0x58f560(0x1c1)]),console[_0x58f560(0x1d1)](_0x13efe4[0x0][_0x58f560(0x1c4)][0x0][_0x58f560(0x1c0)][0x0]['definition']);const _0x521626=Object[_0x58f560(0x1bd)](_0x13efe4);console['log'](_0x521626),msg['text']=_0x58f560(0x1cb)+_0x2731d4+_0x58f560(0x1cc)+_0x13efe4[0x0][_0x58f560(0x1c4)][0x0][_0x58f560(0x1c0)][0x0][_0x58f560(0x1c3)]+'and\x20second\x20meaning\x20of'+_0x2731d4+_0x58f560(0x1cc)+_0x13efe4[0x0]['meanings'][0x1][_0x58f560(0x1c0)][0x0][_0x58f560(0x1c3)]+_0x58f560(0x1c2),window['speechSynthesis'][_0x58f560(0x1bc)](msg);var _0x4d4440=document[_0x58f560(0x1ca)]('music');_0x4d4440['src']=_0x13efe4[0x0]['phonetics'][0x0][_0x58f560(0x1cf)],document[_0x58f560(0x1ca)]('p1')['innerHTML']=_0x13efe4[0x0][_0x58f560(0x1c4)][0x0]['definitions'][0x0][_0x58f560(0x1c3)],document[_0x58f560(0x1ca)]('p2')[_0x58f560(0x1b7)]=_0x13efe4[0x0]['meanings'][0x1]['definitions'][0x0]['definition'],document[_0x58f560(0x1ca)]('p3')[_0x58f560(0x1b7)]=_0x13efe4[0x0][_0x58f560(0x1c4)][0x0]['definitions'][0x0][_0x58f560(0x1b8)],document[_0x58f560(0x1ca)]('p4')[_0x58f560(0x1b7)]=_0x13efe4[0x0][_0x58f560(0x1bf)];}_0x4a4774();}
+        </script>
+<div id="f"></div>
+</body>
+
+</html>
+<!-- https://aksmeet.aksuniversity.com
+// /aksclass/aksclass.html?room=5btechcse
+// &id=75776150396c57356b5a496e786654515963593937464369684942795a636a386362555348313347724b366959314a656d396951393448343534785a6775367972373541346d6f55424b42526f784e7966682f7351773d3d&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb250ZXh0Ijp7InVzZXIiOnsibmFtZSI6IlJJU0hBQkggVElXQVJJIn0sImZlYXR1cmVzIjp7InJlY29yZGluZyI6ZmFsc2UsImxpdmVzdHJlYW1pbmciOmZhbHNlLCJzY3JlZW4tc2hhcmluZyI6ZmFsc2V9fSwiYXVkIjoiYWtzbWVldCIsImlzcyI6ImFrc21lZXQiLCJzdWIiOiJha3NtZWV0LmFrc3VuaXZlcnNpdHkuY29tIiwicm9vbSI6IjVidGVjaGNzZSIsIm5iZiI6MTYzMDEzNTI5MSwiZXhwIjoxNjMwMTM3NjAwLCJtb2RlcmF0b3IiOmZhbHNlLCJpZCI6Ijc1Nzc2MTUwMzk2YzU3MzU2YjVhNDk2ZTc4NjY1NDUxNTk2MzU5MzkzNzQ2NDM2OTY4NDk0Mjc5NWE2MzZhMzg2MzYyNTU1MzQ4MzEzMzQ3NzI0YjM2Njk1OTMxNGE2NTZkMzk2OTUxMzkzNDQ4MzQzNTM0Nzg1YTY3NzUzNjc5NzIzNzM1NDEzNDZkNmY1NTQyNGI0MjUyNmY3ODRlNzk2NjY4MmY3MzUxNzczZDNkIn0.51Ie55b0YI7WNYJtJOmx91C
+// TUuQgh1_B_VZcceapilI -->

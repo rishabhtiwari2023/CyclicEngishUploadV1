@@ -1,0 +1,119 @@
+<html>
+    <head> <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+        <script>$(function (){$('#h').load('/partials/header.htm');});</script>
+        <script>$(function (){$('#f').load('/partials/footer.htm');});</script>
+<style>
+    body{
+        background-image: url(w.jpeg);
+    }
+    fieldset{
+        margin-top: 100px;
+        margin-left: 200px;
+        font-size: 30px;
+        color: rgb(153, 106, 17);
+        font-weight: bolder;
+    }
+    td{
+        margin-top: 100px;
+        margin-left: 200px;
+        font-size: 30px;
+        color: rgb(19, 2, 2);
+        font-weight: bolder;
+    }
+    .i{
+        border-radius: 20px;
+        text-align: center;
+    }.div{
+        margin-top: 20px;
+        background-color: cyan;
+        border: darkgoldenrod solid 2px;
+        text-align: center;
+        font-size: 40px;
+
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    /* mmm? */
+    
+#box{
+    margin-top: 20px;color: cornsilk;
+    font-size: larger;padding: 30px 30px 30px 30px;
+    padding-top: 30px;
+}
+.hl{
+    background-color: rgb(204, 207, 207);
+    height: 70px;
+
+}
+#b1{
+   object-fit: cover;
+   height: 500px;
+   width: 700px;
+}
+.hl a{margin-top: 20px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 100;
+    font-size: large;
+    color: black;
+
+}
+.bg_i{
+    background-image: url("https://images.pexels.com/photos/598682/pexels-photo-598682.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+height: 600px;  filter: blur(8px);
+  -webkit-filter: blur(8px);
+background-size: cover;
+
+}
+</style>
+    </head>
+    <body><div id="h"></div>
+        <div class="head">
+            <div class="hl"><span id="box"> BOXING</span>
+
+            <!-- </div> -->
+            <!-- <div class="hr"> -->
+                <a href="boxing.html">Home</a><a href="form.html">Registration</a>
+                <a href="signup.html">Sign up</a><a href="">About</a>
+            </div>
+        </div>
+        <div class="div">***************Registration form****************</div>
+        <form action="auth" method="POST">
+            <fieldset>
+                <legend>WELCOME BOXER</legend><table></th>
+<!-- Enter your first name    <input class="i" type="text" placeholder="enter firstname"><br>
+Enter your mid name     <input class="i" type="text" placeholder="enter midname"><br>
+Enter your firstlast name   <input class="i" type="text" placeholder="enter lastname"><br>
+Enter your address <input type="text"class="i"  placeholder="address"><br>
+Date of birth <input type="date" class="i" name="" id=""><br>
+Weight <input type="number"class="i"  name="" id=""><br>
+Email id <input type="email"  class="i" name="" id=""><br></table> -->
+
+<table>
+    <tr>
+        <td><p>Enter your first name </p></td><td><input class="i" name="fn" type="text" placeholder="enter firstname"></td>
+    </tr>
+    <tr>
+        <td><p>Enter your mid name </p>  </td><td><input class="i" name="mn" type="text" placeholder="enter midname"></td>
+    </tr>
+    <tr>
+        <td><p>Enter your last name </p> </td><td> <input class="i" name="ln" type="text" placeholder="enter lastname"></td>
+    </tr>
+    <tr>
+        <td><p>Enter your address</p></td><td><input type="text"class="i" name="add"  placeholder="address"></td>
+    </tr>
+    <tr>
+        <td><p>Date of birth</p></td><td> <input type="date" class="i" name="dob" id=""></td>
+    </tr>
+    <tr>
+        <td><p>Mobile</p></td><td><input type="number"class="i"  name="mob" id=""></td>
+    </tr>
+    <tr>
+        <td><p>Email id</p></td><td> <input type="email"  class="i" name="email" id=""></td>
+    </tr>
+<button type="submit">Submit</button>
+</table>
+</fieldset>
+        </form><div id="f"></div>
+
+    </body>
+    </html>

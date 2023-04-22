@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+<style>
+    .course-3 {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .course-3 .box {
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .course-3 .box:hover .video video {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    .course-3 .box .video {
+        height: 25rem;
+        width: 100%;
+        overflow: hidden;
+        border-radius: .5rem;
+        position: relative;
+    }
+    
+    .course-3 .box .video video {
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    .course-3 .box .video i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        background: #fff;
+        color: #302851;
+        pointer-events: none;
+        z-index: 10;
+    }
+    
+    .course-3 .box .content {
+        padding-top: 1rem;
+    }
+    
+    .course-3 .box .content h3 {
+        font-size: 1.7rem;
+        color: #302851;
+        padding: .5rem 0;
+    }
+    
+    .course-3 .box .content p {
+        font-size: 1.5rem;
+        color: #666;
+    }
+    
+        .main-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.7);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+        
+        .main-video.active {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        
+        .main-video #close-vid {
+            position: absolute;
+            top: 1.5rem;
+            right: 2.5rem;
+            font-size: 6rem;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .main-video video {
+            width: 80%;
+            border: 0.5rem solid #fff;
+            border-radius: .5rem;
+        }
+        
+        </style>
+    <script>
+    
+        let mainVid = document.querySelector('.main-video');
+        
+        document.querySelectorAll('.course-3 .box .video video').forEach(vid =>{
+        
+            vid.onclick = () =>{
+                let src = vid.getAttribute('src');
+                mainVid.classList.add('active');
+                mainVid.querySelector('video').src = src;
+            }
+        
+        });
+        
+        document.querySelector('#close-vid').onclick = () =>{
+            mainVid.classList.remove('active');
+        }
+        </script>
+            
+    </head>
+    
+    <body>
+<section class="course-3">
+
+    <div class="box">
+        <div class="video">
+            <i class="fas fa-play"></i>
+            <img src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg" alt="">
+            <!-- <video src="images/category-5.png"></video> -->
+        </div>
+        <div class="content">
+            <h3>introduction to design</h3>
+            <p>by john deo</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="video">
+            <i class="fas fa-play"></i>
+            <img src="https://cdn.pixabay.com/photo/2016/11/14/03/43/buddhism-1822518__340.jpg" alt="">
+            <!-- <video src="images/about-2.mp4"></video> -->
+        </div>
+        <div class="content">
+            <h3>Best Library</h3>
+            <p>by admin </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="video">
+            <i class="fas fa-play"></i>
+            <!-- <img src="https://cdn.pixabay.com/photo/2016/11/14/03/43/buddhism-1822518__340.jpg" alt=""> -->
+            <video src="/images/vid.mp4"></video>
+        </div>
+        <div class="content">
+            <h3>Best Study</h3>
+            <p>by admin </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="video">
+            <i class="fas fa-play"></i>
+            <img src="https://cdn.pixabay.com/photo/2016/11/14/03/43/buddhism-1822518__340.jpg" alt="">
+            <!-- <video src="images/about-4.mp4"></video> -->
+        </div>
+        <div class="content">
+            <h3>Best Study</h3>
+            <p>by admin </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="video">
+            <i class="fas fa-play"></i>
+            <img src="https://cdn.pixabay.com/photo/2016/11/14/03/43/buddhism-1822518__340.jpg" alt="">
+            <!-- <video src="images/about-5.mp4"></video> -->
+        </div>
+        <div class="content">
+            <h3>Best Study</h3>
+            <p>by admin </p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="video">
+            <i class="fas fa-play"></i>
+            <video src="images/about-6.mp4"></video>
+        </div>
+        <div class="content">
+            <h3>Best Sports</h3>
+            <p>by admin </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- course-3 section ends -->
+
+<div class="main-video">
+    <div id="close-vid" class="fas fa-times"></div>
+    <video src="" autoplay controls muted></video>
+</div>
+
+</body>
+</html>

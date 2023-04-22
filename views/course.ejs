@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="../../public/noun.css"> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+<script>$(function (){$('#d').load('../partials/header.htm');});</script>
+<script>$(function (){$('#f').load('../partials/footer.htm');});</script>
+  <style>
+        
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create a column layout with Flexbox */
+  .row {
+    display: flex;
+  }
+  
+  /* Left column (menu) */
+  .left {
+    flex: 15%;
+    padding: 10px 0;
+  }
+  
+  .left h2 {
+    padding-left: 8px;
+  }
+  
+  /* Right column (page content) */
+  .right {
+    flex: 85%;
+    padding: 10px;
+  }
+  
+  /* Style the search box */
+  #mySearch {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style the navigation menu inside the left column */
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myMenu li a {
+    padding: 9px;
+    text-decoration: none;
+    color: black;
+    display: block
+  }
+  
+  #myMenu li a:hover {
+    background-color: #eee;
+  }
+  
+/* 33333333333333333333333333333333333333333333333333333333333hover of all lessons name buttons */
+#b1 {
+    display: inline-block;  padding: 15px 25px;  font-size: 24px;  cursor: pointer;  
+    text-align: center;  text-decoration: none;  outline: none;
+    color: #fff;  background-color: #8ec5db;  border: none;  border-radius: 15px; 
+    box-shadow: 0 9px #999;}
+#b1:hover {background-color: #0db437}
+#b1:active {
+background-color: #3e8e41;box-shadow: 0 5px #666;transform: translateY(4px);}
+
+
+    </style>
+</head>
+<body>
+    
+<div id="d"></div>
+<div class="center"><h1 id="eng">English Grammar</h1>
+  <p>  Grammar refers to the way words are used, classified, and structured together
+    to form coherent written or spoken communication.
+    This guide takes a traditional approach to teaching English grammar, breaking
+    the topic into three fundamental elements: Parts of Speech, Inflection, and
+    Syntax. Each of these is a discrete, individual part, but they are all intrinsically
+    linked together in meaning.</p>
+   <h2> Parts of Speech</h2>
+<p>In the first part of the guide, we will look at the basic components of English—
+    words. The parts of speech are the categories to which different words are
+    assigned, based on their meaning, structure, and function in a sentence.
+    We’ll look in great detail at the seven main parts of speech—nouns, pronouns,
+    verbs, adjectives, adverbs, prepositions, and conjunctions—as well as other
+    categories of words that don’t easily fit in with the rest, such as particles,
+    determiners, and gerunds.
+    By understanding the parts of speech, we can better understand how (and why)
+    we structure words together to form sentences.</p>
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="noun.htm" id="b1">noun</a></li>
+      <li><a href="pronoun.htm" id="b1">Pronoun</a></li>
+      <li><a href="subject.htm" id="b1">Sentence</a></li>
+      <li><a href="voice.htm" id="b1">voice</a></li>
+      <li><a href="dictionary.htm" id="b1">dictionary</a></li>
+      <li><a href="MCQgame.htm" id="b1">MCQgame</a></li>
+      <li><a href="vocabAmerican.htm" id="b1">Vocabalary 1</a></li>     
+      <li><a href="vocabProverb.htm" id="b1">Vocabalary 2</a></li>
+      <li><a href="VocabTravel.htm" id="b1">Vocabalary 2</a></li>
+      <li><a href="signin.htm" id="b1">SignIN</a></li>
+
+      
+    </ul>
+  </div>
+  <script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+  <!-- 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222right menu 75%-->
+  <div class="right" style="background-color:#ddd;">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Nouns
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Nouns are words that identify or name people, places, or things. Nouns can
+                function as the subject of a clause or sentence, an object of a verb, or an object
+                of a preposition. Words like cat, book, table, girl, and plane are all nouns.            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Pronouns
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Pronouns are words that represent nouns (people, places, or things).
+                Grammatically, pronouns are used in the same ways as nouns; they can function
+                as subjects or objects. Common pronouns include I, you, she, him, it, everyone,
+                and somebody.            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Verbs
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Verbs are words that describe the actions—or states of being—of people,
+                animals, places, or things. Verbs function as the root of what’s called the
+                predicate, which is required (along with a subject) to form a complete sentence;
+                therefore, every sentence must include at least one verb.
+                Verbs include action words like run, walk, write, or sing, as well as words
+                describing states of being, such as be, seem, feel, or sound.            </div>
+          </div>
+        </div>    <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Adjectives
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Adjectives are words that modify (add description to) nouns and (occasionally)
+                pronouns. They can be a part of either the subject or the predicate. Common
+                adjectives are red, blue, fast, slow, big, tall, and wide.           </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Adverbs
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Adverbs are words that modify verbs, adjectives, other adverbs, or even entire
+                clauses. Depending on what they modify (and how), adverbs can appear
+                anywhere in the sentence. Adverbs are commonly formed from adjectives by
+                adding “-ly” to the end, as in slowly, quickly, widely, beautifully, or commonly.         </div>
+            </div>
+          </div> 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Prepositions
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Prepositions are words that express a relationship between a noun or pronoun
+                (known as the object of the preposition) and another part of the sentence.
+                Together, these form prepositional phrases, which can function as adjectives or
+                as adverbs in a sentence. Some examples of prepositional phrases are: on the
+                table, in the shed, and across the field. (The prepositions are in bold.)        </div>
+            </div>
+          </div> 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Conjunctions
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Conjunctions are words that connect other words, phrases, or clauses,
+expressing a specific kind of relationship between the two (or more) elements.
+The most common conjunctions are the coordinating conjunctions: and, but,
+or, nor, for, so, and yet.
+              
+          </div> 
+      </div></div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            Conjunctions
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Conjunctions are words that connect other words, phrases, or clauses,
+expressing a specific kind of relationship between the two (or more) elements.
+The most common conjunctions are the coordinating conjunctions: and, but,
+or, nor, for, so, and yet.
+          
+      </div> 
+  </div></div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingNine">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+       
+Other Parts of Speech
+      </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        In addition to the seven parts of speech above, there are several other groupings
+of words that do not neatly fit into any one specific category—particles,
+articles, determiners, gerunds, and interjections.
+Many of these share characteristics with one or more of the seven primary
+categories. For example, determiners are similar in many ways to adjectives,
+but they are not completely the same, and most particles are identical in
+appearance to prepositions but have different grammatical functions.
+Because they are harder to classify in comparison to the seven primary
+categories above, they’ve been grouped together in this guide under the general
+category Other Parts of Speech.
+      
+  </div> 
+</div></div>
+    
+    </div>
+</div>
+
+
+
+
+
+  
+<div id="f"></div>
+
+
+</body>
+</html>

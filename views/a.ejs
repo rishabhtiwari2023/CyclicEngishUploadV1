@@ -1,0 +1,474 @@
+<html>
+
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" href="https://cdn.pixabay.com/photo/2016/06/13/07/59/pi-1453836_960_720.jpg" type="image/icon type">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+  <script>$(function (){$('#h').load('/partials/header.htm');});</script>
+  <script>$(function (){$('#f').load('/partials/footer.htm');});</script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    box-sizing: border-box;
+  }
+  
+  /* header slide show rt */
+  
+      .mySlides {display: none;}
+      img {vertical-align: middle;}
+   
+      .slideshow-container {    position: relative;  margin: auto;}
+      .text1 {  color: white;
+  text-shadow: 4px 4px 6px #000000;  font-size: 40px;  padding: 8px 12px;  position: absolute;font-weight: bold;width: min-content;
+        bottom: 98px;  width: 100%;border-bottom: #000;  text-align: center;}
+      .active {  background-color: #717171;}
+      .fade {  -webkit-animation-name: fade;  -webkit-animation-duration: 1.5s;
+        animation-name: fade;  animation-duration: 1.5s;} 
+      @-webkit-keyframes fade {  from {opacity: .4}   to {opacity: 1}}
+      @keyframes fade {  from {opacity: .4}   to {opacity: 1}}
+      @media only screen and (max-width: 300px) {  .text {font-size: 11px}}
+  .header {          
+              text-align: center;
+              background: #829f99;
+              color: white;
+              }
+  
+  /* Increase the font size of the heading */
+  .header h1 {
+              font-size: 40px;
+              }
+  
+  /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+  .navbar {
+                  overflow: hidden;
+                  background-color: #333;
+                  position: sticky; top: 0;
+                  position: -webkit-sticky;
+                  }
+  
+  /* Style the navigation bar links */
+
+  
+  /* Right-aligned link */
+
+   .navbar img{
+       margin-left: 10px;height: 70px;border: #333;
+                 border-radius: 50%;
+       margin-right: 20px;width: 120px;
+     }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+                  background-color: rgb(221, 211, 211);
+                  color: rgb(114, 149, 121);border: #333;
+                 border-radius: 20px;
+                  }
+  
+  /* Active/current link */
+  .navbar a.active {
+                  background-color: rgb(14, 6, 6);
+                  color: white;border: #333;
+                 border-radius: 20px;
+                  }
+  
+  /* Column container */
+  .row {  
+                  display: -ms-flexbox; /* IE10 */
+                  display: flex;
+                  -ms-flex-wrap: wrap; /* IE10 */
+                  flex-wrap: wrap;
+                  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+              -ms-flex: 20%; /* IE10 */
+              flex: 10%;
+              background-color: #f1f1f1;
+              padding: 10px;
+              }
+  
+  /* Main column */
+  .main {   
+              -ms-flex: 70%; /* IE10 */
+              flex: 80%;
+              background-color: white;
+              padding: 10px;
+              }
+  
+  /* Fake image, just for this example */
+  .fimg {
+              background-color: #aaa;
+              width: 100%;
+              padding: 20px;
+              }
+  #move #moveimg{
+    height: 300px;width: 700px;background-color: aquamarine;
+    font-size: 2px;transition: 2s linear;
+  }#move:hover #moveimg{
+    font-size: 18px;margin-left: 30px;color: rgb(204, 12, 12);
+  }
+   .main1{
+                height: 300px;display: flex;border: 2px solid burlywood;border-radius: 10px;
+                width: 900px;background-image: url("https://images.pexels.com/photos/207740/pexels-photo-207740.jpeg?auto=compress&cs=tinysrgb&w=800&h=350&dpr=2");
+            }
+            .para{background-color: rgb(186, 235, 236);
+                flex: 30%;
+                margin: 30px 30px 30px 30px ;
+            }
+            .img1{
+                flex: 70%;
+                align-items: center;
+                transition: 2s;
+            }
+            .im{background-color: rgb(167, 224, 226);
+                border: 1px solid burlywood;border-radius: 40px;
+                transition: 2s;
+            }
+            .im:hover{
+                height: 300px;width: 400px;
+                margin-left: 200px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .text-desc{
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	background: #ee6e73;
+	height: 100%; 
+	opacity: 0; 
+	width: 100%; 
+	padding: 20px;
+}
+.port-7{ 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    overflow: hidden;
+}
+.port-7 .text-desc{
+	opacity: 0; 
+	transition: 0.5s; 
+	color: #000;
+}
+.port-7.effect-2 img{
+	transition: 0.5s; 
+	position: relative; 
+	width: 100%; 
+	top: 0;
+}
+.port-7.effect-2:hover img{
+	top: 50%;
+}
+.port-7.effect-2 .text-desc{
+	transform: perspective(600px) rotateX(90deg);
+	transform-origin: top center 0; 
+	width: 100%; 
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	height: 30%;
+    padding: 23px 10px 0;
+}
+.port-7.effect-2:hover .text-desc{
+	opacity: 1; 
+	transform: perspective(600px) rotateX(0deg);
+	z-index: 99;
+}
+
+.banner-bottom {
+    text-align: center;
+    background: #EDF7FF;
+}
+.ban-grid i {
+    font-size: 2.5em;
+    color: #373737;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.ban-grid h4 {
+	font-size: 2em;
+    color: #ee6e73;
+    text-transform: capitalize;
+}
+.ban-grid p{
+    font-size: 1em;
+	line-height:1.8em;
+	margin-top:0.5em
+}
+.ban-grid:hover div.ban-right i {
+    color: #3B5998;
+}
+.ban-left {
+    float: left;
+    width: 70%;
+}
+.ban-right {
+    float: left;
+    width: 30%;
+}
+.ban-grid {
+    padding: 2em 0;
+}
+.welcome-w3,.new-w3agile,.about-w3,.services-w3l,.projects-agile,.courses-w3ls,.statistics-w3,.typo-w3,.contact-w3l{
+    padding: 5em 0;
+}
+.wel-grids,.student-grids,.about-grids,.what-grids,.staff-grids,.statistics-grids,.services-grids,.ourser-grids,.course-grids {
+    margin-top:4em;
+}
+.student-w3ls {
+    padding: 5em 0;
+	background: #EDF7FF
+}
+.student-grid h4 {
+    font-size: 2em;
+    color: #ee6e73;
+}
+.student-grid p {
+    font-size: 1em;
+    padding-top: 1em;
+}
+ul.grid-part li {
+    list-style: none;
+    font-size: 1em;
+    color: #777;
+    line-height: 2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+ul.grid-part {
+    margin-top: 1em;
+}
+ul.grid-part li :hover {
+    color: #ee6e73;
+    padding-left: 0.2em;
+}
+ul.grid-part li i {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    color: #3B5998;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+</style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+    <!-- header of website -->
+            <div class="header">
+                <h1>Future point</h1>
+                <p>Master <b>Math</b>  with future point live classes</p>
+                <div class="slideshow-container">
+                  <div class="mySlides fade">  
+                           <a href="a"> <img src="images/banner.jpg" style="width: 1300px; height: 500px;">
+                              <div class="text1">Think Different! <br>We provide wings to your dream</div></a>  
+                              </div>
+                  <div class="mySlides fade">    
+                    <a href="dictionary">  <img src="images/banner1.jpg" style="width: 1300px; height: 500px;">  
+                          <div class="text1">Yes, You Can! <br>Success comes in CANs, not CAN'Ts</div></a>  
+                          </div>
+                  <div class="mySlides fade">
+                    <a href="noun">  <img src="images/banner2.jpg"  style="width: 1300px; height: 500px;">  
+                          <div class="text1">Dream Big! <br>Make your dream come true</div></a>  
+                          </div></div>
+                  <div style="text-align:center">  <span class="dot"></span>  <span class="dot"></span> 
+                    <span class="dot"></span> </div>
+            </div>
+            <%- include('include/_header') %></div><div class="row">
+             
+             
+    <!-- <div class="side"> -->
+                                <!-- <h2>About faculty</h2>
+                                <h5>Top faculity:</h5> -->
+                                <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+                                <!-- <img src="/image/sir.png" alt=""style="height:120px;width=120px">
+                                <p>completed phd from delhi university</p>
+                                <img src="/image/a2.png" alt="" width="110px" style="height:120px;width=420px">
+                                <p>Won 2nd rank from Haward university</p>
+                                <img src="/image/group.jpg" alt=""style="height:120px;width=120px">
+                                <p>completed MSC from bangalore university</p>
+                                <h3>More Text</h3>
+                                <p>-------------------------.</p> -->
+                                <!-- <div class="fimg" style="height:60px;" >------</div><br>
+                                <div class="fimg" style="height:60px;" > ------</div><br>
+                                <div class="fimg" style="height:60px;" >------</div> -->
+                            <!-- </div> -->
+
+    <!-- main=main content of website                         -->
+    <div class="main">
+      <div class="content">
+            
+        <!--banner-bottom-->
+              
+        <div class="banner-bottom">
+          <div class="col-md-3 ban-grid">
+            <div class="ban-left">
+              <h4>Expert Teachers</h4>
+              <p>Highly Qualified Faculties</p>
+            </div>
+            <div class="ban-right">
+              <i class="glyphicon glyphicon-user"> </i>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-3 ban-grid">
+            <div class="ban-left">
+              <h4>Video Classes</h4>
+              <p>Video Lectures for specific topics</p>
+            </div>
+            <div class="ban-right">
+              <i class="glyphicon glyphicon-facetime-video"> </i>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-3 ban-grid">
+            <div class="ban-left">
+              <h4>Study Materials</h4>
+              <p>Online Study Materials</p>
+            </div>
+            <div class="ban-right">
+              <i class="glyphicon glyphicon-book"> </i>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-3 ban-grid">
+            <div class="ban-left">
+              <h4>Online Exams</h4>
+              <p>Regular e-assessmnets</p>
+            </div>
+            <div class="ban-right">
+            <i class="glyphicon glyphicon-blackboard"> </i>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+              
+        <!--banner-bottom-->
+              
+          
+        <!--welcome-->
+              
+        <!--brief about singh tutorial-->
+        <div class="student-w3ls">
+          <div class="container">
+            <h3 class="tittle"> About Us</h3>
+            <div class="student-grids">
+              <div class="col-md-6 student-grid">
+                <h4>First Smart Class Provider Institute at Kotar</h4>
+                              <p align="justify">Future point has been born out of the growing need for high quality coaching that could keep pace with the ever-changing global prospective in the field of education. We have started a journey, which will never end, journey which will take us to, to greater heights with each step. </p>
+                  <ul class="grid-part">
+                    <li><i class="glyphicon glyphicon-ok-sign"> </i>Well Qualified & Educated Teachers</li>
+                    <li><i class="glyphicon glyphicon-ok-sign"> </i>Digital Classes for all subjects</li>
+                    <li><i class="glyphicon glyphicon-ok-sign"> </i>Video Lectures and Monthly tests</li>
+                    <li><i class="glyphicon glyphicon-ok-sign"> </i>Sunday Open for Weak Students</li>
+                    <li><i class="glyphicon glyphicon-ok-sign"> </i>Regular Progress Reports</li>
+                                      <li><i class="glyphicon glyphicon-ok-sign"> </i>Special Classes for Olympiads</li>
+                  </ul>
+                              <br/>
+                              <a href="https://drive.google.com/uc?export=downl3YIVDRnemgxang1Ukk"><button type="button" class="btn btn-primary">Download Brochure</button></a></div><br/>
+              </div>
+              <div class="col-md-6 student-grid">
+                <img src="https://www.educationworld.in/wp-content/uploads/2018/10/students.jpg" class="img-responsive" alt="">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        
+                                <h2>Mend your direction in write way</h2>
+                                <h5>Title description, Dec 7, 2017</h5>
+                                        <h2>Math learning beyond school</h2>
+                                        <ul>
+                                            <li>benefit
+                                                Emphasis on students learning math by reasoning and not memorization</li>
+                                            <li>Visual tools to gain deep understanding of concepts</li>
+                                            <li>Learning on your own in the presence of a math expert who is there to help</li>
+                                            <li>
+                                                Instant individual attention to help students clarify doubts</li>
+                                        </ul>
+                                        <h2>How is education like in India?</h2>
+                                        <p>Education in India is provided by both the public sector and the private sectors, alike. Compulsory free education is one of the fundamental rights provided by the constitution of India. India’s progression and increase in its literacy ratio are cited as one of the major reason for it’s economic development. The Indian education system follows 5-levels of schooling: Pre-primary, Primary, Secondary, 10th or Matriculation or Secondary exams and 12th or Higher Secondary or Senior Secondary.
+
+                                            The pre-primary level of education is considered as the foundation stage of a child’s education. The pre-primary level shapes the child’s skills, knowledge, and behavior. After the completion of the pre-primary level, the child is sent to the primary level.
+                                            The primary level of education also known as elementary education is imparted to children aged 6-14, to at times decrease the chances of them getting into child labor. After the completion of the primary level, the students are promoted to the Secondary level, consisting of students aged 12-18. This level is also sometimes known as Senior secondary, or +2.
+                                            </p>
+
+                                            <%- include('include/testo') %>
+
+
+                                            
+
+
+                              <div class="main1">
+                                  <div class="para">
+                              <h3>Objective</h3>
+                              <p>I am trying to give you content in easy way so that the learning capacity of math will be enhenced</p>
+
+                                  </div>
+                                  <div class="img1">
+                              <img class="im" src="https://cdn.pixabay.com/photo/2016/04/13/16/09/pi-1327145_960_720.png" height="200px" width="200px"  alt="" srcset="">
+                                  </div>
+                              </div>
+                                <p>completed MSC from bangalore university</p>
+                                <p>Some text..</p>
+                                <br>
+                                <p>Build not just competence but also intuition for these critical 21st century life-skills.Make the world’s children great at math, and create invincible problem-solvers who will go on to solve humanity’s biggest problems.</p>
+                                <h2>IMPORTANCE</h2>
+                                <h5>, Aug 2, 2020</h5>
+                                <div class="fakeimg1" style="height:400px;"><img src="https://cdn.pixabay.com/photo/2018/11/17/12/27/mathematics-3821034_960_720.jpg" alt=""style="height:300px;" width="1000px" srcset=""></div>
+                              </div>
+                            </div>    <%- include('include/_footer') %>
+                            <script>
+                                
+          var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";          }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000);
+        //  Change image every 2 seconds    
+        }
+                            </script>
+    </body>
+</html>

@@ -1,0 +1,540 @@
+<!-- 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="/js/index.js"></script>
+
+<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<style>
+  /* Footer */
+  .footer {   margin-top: 300px;
+              padding: 20px;
+              text-align: center;
+              background: rgb(71, 220, 213);
+              }
+  /* login form rt */
+  .open-button {
+      background-color: #555;
+      color: white;
+      padding: 6px 10px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position:absolute;
+      bottom: 13px;
+      right: 28px;
+      width: 80px;            float: left;
+  font-size: medium;
+  margin-top: 20px;
+      text-align: center;
+  margin-right: 60px;
+      text-decoration: none;
+      }
+  
+  /* The popup form - hidden by default */
+  .form-popup {    background-color: rgb(28, 201, 224);
+          display: none;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          border: 3px solid #f1f1f1;
+          z-index: 9;
+          }
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {   
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  /* footer */
+  .main-content{
+    display: inline;
+    display: flex;
+}
+.leftbox{ margin-left: 50px;
+width: 30%;
+border: aqua;
+border-width: 5px;
+border-radius: 30px;
+background-color: rgb(230, 230, 238);
+padding-left: 12px;padding-right: 21px;
+display: block;
+}
+.rightbox{ margin-left: 50px;
+width: 30%;
+border: aqua;
+border-width: 5px;
+border-radius: 30px;
+background-color: rgb(220, 220, 226);
+padding-left: 12px;padding-right: 21px;
+display: block;
+}
+.centerbox{
+margin-left: 50px;
+border: rgb(240, 59, 14);
+border-width: 50px;
+border-radius: 30px;
+background-color: rgb(224, 224, 230);
+padding-left: 12px;padding-right: 21px;
+display: block;
+}
+.bottom{
+margin-top: 50px;
+}
+  /* https://www.w3schools.com/howto/default.asp */
+  footer a{margin: 40px;
+
+  color: #1abc9c;font-weight: 80px;text-decoration: none;
+}
+  footer a:hover{font-weight: bolder;
+    
+  background: rgb(44, 39, 39);}
+  #ico{height: 30px;
+    background-color: azure;
+  }
+</style>
+<div class="footer">
+      <footer>
+        <div class="main-content">
+          <div class="leftbox">
+            <h2>About us</h2>
+            <div class="content">
+              <p>RISHI KI CODESHALA is a YouTube channel where you can learn web designing, web development, ui/ux designing, html css tutorial, hover animation and effects, javascript ,api call, node js,python,c++ and related so on.</p>
+             
+            </div>
+          </div>
+    
+          <div class="centerbox">
+            <h2>Address</h2> 
+            <span class="text">Nai basti, satna</span>
+           <span class="text">+089-765432100</span>           
+          
+                <span class="text">abc@example.com</span>
+              </div>               
+      
+    
+          <div class="rightbox">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div><span id="ico">
+        <a href="#" class="fa fa-facebook icon-3x" style="font-size: 50px; border: 2px solid rgb(236, 234, 234);"></a>
+        <a href="#" class="fa fa-twitter icon-3x" style="font-size: 50px;border: 2px solid rgb(253, 247, 247);"></a>
+        <a href="#" class="fa fa-google icon-3x" style="font-size: 50px;border: 2px solid rgb(247, 243, 243);"></a>
+        <a href="#" class="fa fa-linkedin icon-3x" style="font-size: 50px;border: 2px solid rgb(252, 249, 249);"></a>
+        <a href="#" class="fa fa-youtube icon-3x" style="font-size: 50px;border: 2px solid rgb(241, 239, 239);"></a>
+        <a href="#" class="fa fa-instagram icon-3x"style="font-size: 50px;border: 2px solid rgb(241, 239, 239);"></a> </span>
+        <div class="bottom">
+          <center>
+            <span class="credit">Created By <a href="#">rishikicodeshala</a> | </span>
+            <span class="far fa-copyright"></span><span>@  2020 All rights reserved.</span>
+            <p>
+
+Disclaimer | Privacy & Cookies | Copyright</p>
+
+            
+          </center>
+        </div>
+      </footer>
+    
+
+</body>
+</html> 
+
+</body>
+</html> -->
+
+        <!-- Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <style>/*******************************/
+          /********* Footer 4 CSS ********/
+          /*******************************/
+          /* body {
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+              background: #ffffff;
+          } */
+          
+          a {
+              transition: .3s;
+          }
+          
+          a:hover,
+          a:active,
+          a:focus {
+              outline: none;
+              text-decoration: none;
+          }
+          
+          .footer {
+              position: relative;
+              padding-top: 45px;
+              background: #121518;
+          }
+          
+          .footer .footer-about,
+          .footer .footer-contact,
+          .footer .footer-links,
+          .footer .footer-project {
+              position: relative;
+              margin-bottom: 45px;
+              color: #999999;
+          }
+          
+          .footer .footer-about h3,
+          .footer .footer-contact h3,
+          .footer .footer-links h3,
+          .footer .footer-project h3 {
+              position: relative;
+              margin-bottom: 20px;
+              padding-bottom: 10px;
+              font-size: 20px;
+              font-weight: 600;
+              color: #eeeeee;
+          }
+          
+          .footer .footer-about h3::after,
+          .footer .footer-contact h3::after,
+          .footer .footer-links h3::after,
+          .footer .footer-project h3::after {
+              position: absolute;
+              content: "";
+              width: 50px;
+              height: 2px;
+              left: 0;
+              bottom: 0;
+              background: #eeeeee;
+          }
+          
+          .footer .footer-social {
+              position: relative;
+              margin-top: 20px;
+          }
+          
+          .footer .footer-social a {
+              display: inline-block;
+              width: 35px;
+              height: 35px;
+              padding: 6px 0;
+              text-align: center;
+              color: #999999;
+              font-size: 14px;
+              border: 1px solid #999999;
+              border-radius: 35px;
+          }
+          
+          .footer .footer-social a:hover {
+              color: #ffffff;
+              background: #0085ff;
+              border-color: #0085ff;
+          }
+          
+          .footer .footer-contact p {
+              margin-bottom: 10px;
+              font-size: 16px;
+              color: #999999;
+          }
+          
+          .footer .footer-contact i {
+              margin-right: 10px;
+              font-size: 16px;
+              color: #999999;
+          }
+          
+          .footer .footer-contact a:last-child i {
+              margin: 0;
+          }
+          
+          .footer .footer-contact a:hover i {
+              color: #0085ff;
+          }
+          
+          .footer .footer-links a {
+              display: block;
+              margin-bottom: 6px;
+              padding-left: 15px;
+              color: #999999;
+          }
+          
+          .footer .footer-links a:last-child {
+              margin: 0;
+          }
+          
+          .footer .footer-links a:hover {
+              color: #0085ff;
+          }
+          
+          .footer .footer-links a::before {
+              position: absolute;
+              content: "\f105";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              left: 0;
+          }
+          
+          .footer .footer-project {
+              float: left;
+              font-size: 0;
+          }
+          
+          .footer .footer-project a {
+              padding: 0 8px 8px 0;
+              display: block;
+              width: 33.33%;
+              float: left;
+          }
+          
+          .footer .footer-project a img {
+              width: 100%;
+          }
+          
+          .footer .footer-newsletter {
+              margin-bottom: 35px;
+              max-width: 700px;
+              text-align: center;
+              color: #999999;
+          }
+          
+          .footer .footer-newsletter input {
+              height: 35px;
+              border: none;
+              border-radius: 5px;
+              background: rgba(256, 256, 256, .15);
+              margin-bottom: 15px;
+          }
+          
+          .footer .footer-newsletter .btn {
+              display: block;
+              width: 100%;
+              height: 35px;
+              font-size: 14px;
+              font-weight: 400;
+              text-transform: uppercase;
+              color: #ffffff;
+              background: #e9414a;
+              border-radius: 5px;
+              border: none;
+              transition: .3s;
+          }
+          
+          .footer .footer-newsletter .btn:hover {
+              color: #0085ff;
+              background: #ffffff;
+          }
+          
+          .footer .footer-newsletter .btn:focus {
+              box-shadow: none;
+          }
+          
+          
+          .footer .copyright {
+              position: relative;
+              padding: 25px 0;
+              background: #000000;
+          }
+          
+          .footer .copyright .copy-text p {
+              margin: 0;
+              font-size: 16px;
+              font-weight: 400;
+              color: #999999;
+          }
+          
+          .footer .copyright .copy-text p a {
+              color: #0085ff;
+              text-decoration: none;
+          }
+          
+          .footer .copyright .copy-text p a:hover {
+              color: #ff008c;
+          }
+          
+          .footer .copyright .copy-menu {
+              position: relative;
+              font-size: 0;
+              text-align: right;
+          }
+          
+          .footer .copyright .copy-menu a {
+              color: #999999;
+              font-size: 16px;
+              font-weight: 400;
+              margin-right: 15px;
+              padding-right: 15px;
+              border-right: 1px solid rgba(255, 255, 255, .3);
+          }
+          
+          .footer .copyright .copy-menu a:hover {
+              color: #0085ff;
+          }
+          
+          .footer .copyright .copy-menu a:last-child {
+              margin-right: 0;
+              padding-right: 0;
+              border-right: none;
+          }
+          
+          @media (max-width: 767.98px) {
+              .footer .copyright .copy-text,
+              .footer .copyright .copy-menu {
+                  text-align: center;
+              }
+              
+              .footer .copyright .copy-text p {
+                  margin-bottom: 5px;
+              }
+              
+          }
+          *{
+            font-size: 14px;
+          }
+          </style>
+    </head>
+
+    <body>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-about">
+                            <h3>About Us</h3>
+                            <p>
+                             Future point is first smart class provider institute at Balumath. Our well qualified teachers make us different. At our institute you can find the appropriate conglomeration of enthusiasm and experience which sets us aside from rest of the institutes.                            </p>
+                            <div class="footer-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-contact">
+                            <h3>Get In Touch</h3>
+                            <p><i class="fa fa-map-marker-alt"></i>123 Street,tikuri, Satna</p>
+                            <p><i class="fa fa-phone-alt"></i>+045 67890</p>
+                            <p><i class="fa fa-envelope"></i>in@example.com</p>
+                            <p><i class="far fa-clock"></i>Mon - Fri, 9AM - 10PM</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-links">
+                            <h3>Useful Links</h3>
+                            <a href="">Lorem ipsum</a>
+                            <a href="">tempus posuere </a>
+                            <a href="">velit id accumsan</a>
+                            <a href="">ut porttitor</a>
+                            <a href="">Nam pretium</a>
+                            <a href="">accumsan</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <div class="footer-project">
+                            <h3>Latest Projects</h3>
+                            <a href=""><img src="img/img-1.jpg" alt="Image"></a>
+                            <a href=""><img src="img/img-2.jpg" alt="Image"></a>
+                            <a href=""><img src="img/img-3.jpg" alt="Image"></a>
+                            <a href=""><img src="img/img-4.jpg" alt="Image"></a>
+                            <a href=""><img src="img/img-5.jpg" alt="Image"></a>
+                            <a href=""><img src="img/img-6.jpg" alt="Image"></a>
+                        </div>
+                    </div> -->
+                    <div>
+                      <img style="height: 100px; width:100px" src="images/unnamed.jpg" alt="">jj
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-newsletter">
+                <p>
+                    Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros 
+                </p>
+                <div class="row form">
+                    <div class="col-sm-4">
+                        <input class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col-sm-4">
+                        <input class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="copy-text">
+                                <p>&copy; <a href="#">rishikicodeshala Developer</a>. All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="copy-menu">
+                                <a href="">About</a>
+                                <a href="">Terms</a>
+                                <a href="">Privacy</a>
+                                <a href="">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+    </body>
+</html>
